@@ -13,13 +13,15 @@ def my_home():
 def html_page(page_name):
     return render_template(page_name)
 
-def write_to_file(data):
-    with open('database.txt', mode='a') as database:
-        email = data["email"]
-        subject = data["subject"]
-        message = data["message"]
-        file = database.write(f'\n{email},{subject},{message}')
+# Writing to a text file
+# def write_to_file(data):
+#     with open('database.txt', mode='a') as database:
+#         email = data["email"]
+#         subject = data["subject"]
+#         message = data["message"]
+#         file = database.write(f'\n{email},{subject},{message}')
 
+# Writing to a csv file
 def write_to_csv(data):
     with open('database.csv', newline='', mode='a') as database2:
         email = data["email"]
